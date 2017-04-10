@@ -107,6 +107,16 @@ add_action( 'widgets_init', 'pruf_widgets_init' );
 function pruf_scripts() {
 	wp_enqueue_style( 'pruf-style', get_stylesheet_uri() );
 
+    wp_enqueue_style( 'pruf-bootstrap', get_template_directory_uri() . '/libs/bootstrap/dist/css/bootstrap.min.css' );
+
+    wp_enqueue_style( 'pruf-main', get_template_directory_uri() . '/css/main.min.css' );
+
+    wp_enqueue_script( 'pruf-jquery-slim-js', get_template_directory_uri() . '/libs/jquery/dist/jquery.slim.min.js', array(), '', true );
+
+    wp_enqueue_script( 'pruf-tether-js', get_template_directory_uri() . '/libs/tether/dist/js/tether.min.js', array(), '', true );
+
+    wp_enqueue_script( 'pruf-bootstraps-js', get_template_directory_uri() . '/libs/bootstrap/dist/js/bootstrap.min.js', array(), '', true );
+
 	wp_enqueue_script( 'pruf-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'pruf-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
