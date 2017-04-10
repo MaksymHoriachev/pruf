@@ -109,6 +109,8 @@ function pruf_scripts() {
 
     wp_enqueue_style( 'pruf-bootstrap', get_template_directory_uri() . '/libs/bootstrap/dist/css/bootstrap.min.css' );
 
+    wp_enqueue_style( 'pruf-font-awesome', get_template_directory_uri() . '/libs/font-awesome/css/font-awesome.min.css' );
+
     wp_enqueue_style( 'pruf-main', get_template_directory_uri() . '/css/main.min.css' );
 
     wp_enqueue_script( 'pruf-jquery-slim-js', get_template_directory_uri() . '/libs/jquery/dist/jquery.slim.min.js', array(), '', true );
