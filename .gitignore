@@ -100,4 +100,6 @@ wp-content/themes/twenty*/
 node_modules/
 bower_components/
 .idea/
-# wp-content/themes/gh-exam/.idea
+# wp-content/themes/_tk-pruf/.idea
+# wp-content/themes/understrap-pruf/.idea
+
