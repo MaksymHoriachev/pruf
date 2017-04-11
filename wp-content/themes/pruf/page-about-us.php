@@ -14,6 +14,10 @@
 
 get_header(); ?>
 
+    <div class="col-12">
+        
+    </div>
+
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
