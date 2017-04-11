@@ -14,16 +14,7 @@
 
 get_header(); ?>
 
-<<<<<<< HEAD
-    <div class="col-12">
 
-
-
-    </div>
-
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
-=======
     <div class="col-12 front-section">
         <div class="front-container">
             <h2 class="heading">
@@ -34,9 +25,6 @@ get_header(); ?>
                 Свежее образование в мaтерии паблик рилейшнз
             </p>
         </div>
->>>>>>> 4f49b29d91aabf957abc5345019082a88341dfea
-
-
 
     </div>
 
