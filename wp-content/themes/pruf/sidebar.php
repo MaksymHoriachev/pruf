@@ -12,6 +12,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<div class="col-md-12 col-lg-4">
+
+    <aside id="secondary" class="widget-area" role="complementary">
+        <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </aside><!-- #secondary -->
+
+</div>
