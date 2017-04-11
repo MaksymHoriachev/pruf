@@ -26,27 +26,29 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 site-header-inner">
+				<div class="col-12">
 
-					<div class="site-branding">
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					</div><!-- .site-branding -->
+                    <div class="site-header-inner">
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pruf' ); ?></button>
-						<?php wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id' => 'primary-menu',
-							'menu_class' => 'primary-menu'
-						) ); ?>
-					</nav><!-- #site-navigation -->
+                        <div class="site-branding">
+                            <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title-link" rel="home">pr<span>uf</span></a>
+                        </div><!-- .site-branding -->
 
-				</div><!-- .col -->
+                        <nav id="site-navigation" class="main-navigation" role="navigation">
+                            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pruf' ); ?></button>
+                            <?php wp_nav_menu( array(
+                                'theme_location' => 'menu-1',
+                                'menu_id' => 'primary-menu',
+                                'menu_class' => 'primary-menu'
+                            ) ); ?>
+                        </nav><!-- #site-navigation -->
 
+                    </div>
+
+				</div><!-- .site-header-inner -->
 			</div><!-- .row -->
 		</div><!-- .container -->
-
-
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
