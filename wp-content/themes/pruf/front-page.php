@@ -14,7 +14,6 @@
 
 get_header(); ?>
 
-
     <div class="col-12 front-section">
         <div class="front-container">
             <h2 class="heading">
@@ -25,10 +24,7 @@ get_header(); ?>
                 Свежее образование в мaтерии паблик рилейшнз
             </p>
         </div>
-
     </div>
-
-
 
 <?php
 

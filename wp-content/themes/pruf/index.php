@@ -6,27 +6,25 @@ get_header(); ?>
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 
-                <div class="container">
-                    <div class="row">
+                <div class="row">
 
-                        <?php
-                        if ( have_posts() ) :
-                            while ( have_posts() ) : the_post();
+                    <?php
+                    if ( have_posts() ) :
+                        while ( have_posts() ) : the_post();
 
-                                get_template_part( 'template-parts/content', get_post_format() );
+                            get_template_part( 'template-parts/content', get_post_format() );
 
-                            endwhile;
+                        endwhile;
 
-                            the_posts_navigation();
+                        the_posts_navigation();
 
-                        else :
+                    else :
 
-                            get_template_part( 'template-parts/content', 'none' );
+                        get_template_part( 'template-parts/content', 'none' );
 
-                        endif; ?>
+                    endif; ?>
 
-                    </div><!-- .row -->
-                </div><!-- .container -->
+                </div><!-- .row -->
 
             </main><!-- #main -->
         </div><!-- #primary -->
