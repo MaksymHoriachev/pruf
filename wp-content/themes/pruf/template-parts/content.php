@@ -9,26 +9,27 @@
 
 ?>
 
-<div class="col-md-12 col-lg-4">
+<div class="col-md-12 col-lg-4 entry-post">
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+        <div class="entry-thumbnail">
+            <a href="<?php the_permalink(); ?>">
+                <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail();
+                } else { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/600x400.png" alt="img">
+                <?php }; ?>
+            </a>
+        </div>
+
+        <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );; ?>
+
         <header class="entry-header">
-            <div class="entry-thumbnail">
-                <a href="<?php the_permalink(); ?>">
-                    <?php if ( has_post_thumbnail() ) {
-                        the_post_thumbnail();
-                    } else { ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/600x400.png" alt="img">
-                    <?php }; ?>
-                </a>
-            </div>
+
+
             <?php
-            if ( is_single() ) :
-                the_title( '<h1 class="entry-title">', '</h1>' );
-            else :
-                the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-            endif;
+
 
             if ( 'post' === get_post_type() ) : ?>
                 <div class="entry-meta">
@@ -36,7 +37,7 @@
                 </div><!-- .entry-meta -->
                 <?php
             endif; ?>
-        </header><!-- .entry-header -->
+        </header>
 
         <div class="entry-content">
             <?php
@@ -51,11 +52,11 @@
                 'after'  => '</div>',
             ) );
             ?>
-        </div><!-- .entry-content -->
+        </div>
 
         <footer class="entry-footer">
             <?php pruf_entry_footer(); ?>
-        </footer><!-- .entry-footer -->
+        </footer>
 
     </article><!-- #post-## -->
 
