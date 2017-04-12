@@ -98,10 +98,18 @@ a:valid {
   width: 70%; }
 
 .entry-post article {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); }
-
-.entry-header {
-  margin-bottom: 40px; }
+  box-shadow: 0 0 4px transparent; }
 
 .entry-thumbnail {
   margin-bottom: 20px; }
+  .entry-thumbnail .entry-thumbnail-link img {
+    min-width: 100%; }
+
+.entry-title {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 20px; }
+  .entry-title a {
+    color: #3f3f3f; }
+    .entry-title a:hover {
+      color: #6e6e6e; }

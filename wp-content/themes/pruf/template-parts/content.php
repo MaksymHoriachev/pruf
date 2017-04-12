@@ -14,7 +14,7 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="entry-thumbnail">
-            <a href="<?php the_permalink(); ?>">
+            <a href="<?php the_permalink(); ?>" class="entry-thumbnail-link">
                 <?php if ( has_post_thumbnail() ) {
                     the_post_thumbnail();
                 } else { ?>
@@ -24,6 +24,8 @@
         </div>
 
         <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );; ?>
+        
+        <div class=""></div>
 
         <header class="entry-header">
 
