@@ -70,7 +70,7 @@ a:valid {
   color: #ccc; }
 
 .site-content {
-  padding-top: 40px; }
+  padding-top: 50px; }
 
 .front-section {
   position: relative;
@@ -97,8 +97,13 @@ a:valid {
   text-align: center;
   width: 70%; }
 
-.entry-post article {
-  box-shadow: 0 0 4px transparent; }
+.blog-title {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 20px; }
+
+.entry-post {
+  padding-bottom: 20px; }
 
 .entry-thumbnail {
   margin-bottom: 20px; }
@@ -113,3 +118,22 @@ a:valid {
     color: #3f3f3f; }
     .entry-title a:hover {
       color: #6e6e6e; }
+
+.entry-meta {
+  margin-bottom: 10px; }
+  .entry-meta span {
+    font-size: 12px;
+    margin-right: 5px;
+    text-transform: uppercase; }
+    .entry-meta span:last-child {
+      margin-right: 0; }
+    .entry-meta span a {
+      color: #6e6e6e; }
+      .entry-meta span a:hover {
+        color: #3f3f3f; }
+
+.entry-excerpt p {
+  font-style: italic; }
+
+.inn {
+  padding: 10px; }

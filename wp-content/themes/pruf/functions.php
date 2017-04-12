@@ -41,6 +41,7 @@ function pruf_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+    add_image_size( 'blog-thumbnails', 600, 400, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -153,3 +154,20 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * -------------------------------- Excerpt count length -------------------------------
+ */
+function blog_home_excerpt_length() {
+    return 15;
+};
+add_filter( 'excerpt_length', 'blog_home_excerpt_length' );
+
+function blog_home_excerpt_more(){
+    return ' ...';
+};
+add_filter( 'excerpt_more', 'blog_home_excerpt_more' );
+
+/**
+ * -------------------------------- the custom post type -------------------------------
+ */
