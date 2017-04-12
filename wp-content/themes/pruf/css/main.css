@@ -113,3 +113,9 @@ a:valid {
     color: #3f3f3f; }
     .entry-title a:hover {
       color: #6e6e6e; }
+
+.header-center {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 50px 0; }
