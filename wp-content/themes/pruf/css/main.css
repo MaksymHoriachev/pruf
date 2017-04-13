@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
 body {
-  font: 16px/1.5 "Roboto";
+  font: 300 16px/1.5 "Roboto";
   color: #3f3f3f; }
 
 * {
@@ -24,7 +24,8 @@ a:valid {
   outline: none; }
 
 .site-header {
-  background-color: #3f3f3f; }
+  background-color: #eee;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
 
 .site-header-inner {
   display: flex;
@@ -49,28 +50,30 @@ a:valid {
     font-weight: 700;
     margin: 0; }
   .site-branding a.site-title-link {
-    color: #fff;
+    color: #3f3f3f;
     text-transform: uppercase;
     font-size: 56px;
     line-height: 56px;
     font-weight: normal;
     letter-spacing: 3px; }
     .site-branding a.site-title-link span {
-      color: #ccc; }
+      color: #aaa; }
 
 .primary-menu li {
-  padding: 0 10px; }
+  padding: 0 10px;
+  font-size: 14px; }
   .primary-menu li a {
-    color: #fff;
-    margin: 20px 0; }
+    color: #3f3f3f;
+    margin: 20px 0;
+    text-transform: uppercase; }
     .primary-menu li a:hover {
-      color: #ccc; }
+      color: #aaa; }
 
 .primary-menu li.current_page_item a {
-  color: #ccc; }
+  color: #aaa; }
 
 .site-content {
-  padding-top: 50px; }
+  padding: 50px 0; }
 
 .front-section {
   position: relative;
@@ -113,7 +116,7 @@ a:valid {
 .entry-title {
   font-size: 28px;
   line-height: 36px;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
   .entry-title a {
     color: #3f3f3f; }
     .entry-title a:hover {
@@ -135,8 +138,22 @@ a:valid {
 .entry-excerpt p {
   font-style: italic; }
 
-.inn {
-  padding: 10px; }
+.blog-navigation {
+  padding-top: 20px; }
+  .blog-navigation .posts-navigation {
+    margin: 0;
+    width: 100%; }
+    .blog-navigation .posts-navigation .nav-links div a {
+      color: #6e6e6e;
+      font-size: 14px; }
+      .blog-navigation .posts-navigation .nav-links div a:hover {
+        color: #3f3f3f; }
+
+/* ------------------------- single -------------------------- */
+.entry-title-single {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 15px; }
 
 .header-center {
   text-align: center;

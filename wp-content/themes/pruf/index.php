@@ -16,11 +16,19 @@ get_header(); ?>
 
                             get_template_part( 'template-parts/content', get_post_format() );
 
-                        endwhile;
+                        endwhile; ?>
 
-                        the_posts_navigation();
+                        <div class="col-12 blog-navigation">
 
-                    else :
+                            <?php the_posts_navigation( array(
+                                'prev_text'          => '&larr; Предыдущие статьи',
+                                'next_text'          => 'Следующие статьи &rarr;',
+                                'screen_reader_text' => 'Навигация'
+                            ) ); ?>
+
+                        </div>
+
+                    <?php else :
 
                         get_template_part( 'template-parts/content', 'none' );
 
