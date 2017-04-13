@@ -20,7 +20,15 @@ get_header(); ?>
         <div class="row">
             <div class="col-4">
                 <div class="img-block">
-                    <img src="img/13img.jpg" alt="img">
+                    <div class="entry-thumbnail">
+                        <a href="<?php the_permalink(); ?>" class="entry-thumbnail-link">
+                            <?php if ( has_post_thumbnail() ) {
+                                the_post_thumbnail( 'blog-thumbnails' );
+                            } else { ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/5img.jpg" alt="img">
+                            <?php }; ?>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-8">
