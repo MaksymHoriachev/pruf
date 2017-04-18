@@ -35,6 +35,9 @@ ul {
   width: 100%;
   display: block; }
 
+.pages-section {
+  margin-bottom: 50px; }
+
 .site-header {
   background-color: #eee;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
@@ -84,12 +87,15 @@ ul {
 .primary-menu li.current_page_item a {
   color: #aaa; }
 
+.site-content {
+  padding-top: 50px; }
+
 .front-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: calc(100vh - 101px); }
+  min-height: calc(100vh - 151px); }
 
 .heading {
   font-size: 70px;
@@ -102,10 +108,8 @@ ul {
   text-align: center;
   width: 70%; }
 
-.blog-title {
-  font-size: 40px;
-  line-height: 40px;
-  margin-bottom: 20px; }
+.site-main {
+  padding-bottom: 50px; }
 
 .entry-post {
   padding-bottom: 20px; }
@@ -172,7 +176,12 @@ ul {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-  padding: 50px 10px; }
+  padding: 0 10px 50px 10px; }
+
+.loop-title {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 20px; }
 
 .footer {
   background-color: #eee;

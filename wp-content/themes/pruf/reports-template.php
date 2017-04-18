@@ -1,4 +1,9 @@
 <?php
+
+/*
+Template Name: Posts Events - Reports
+*/
+
 get_header(); ?>
 
     <div class="col-12">
@@ -6,17 +11,26 @@ get_header(); ?>
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 
-                <h2 class="loop-title">Блог</h2>
+                <h2 class="loop-title">Отчеты</h2>
 
                 <div class="row">
 
                     <?php
-                    if ( have_posts() ) :
-                        while ( have_posts() ) : the_post();
+
+                    $args = array(
+                        'post_type' => 'post-event',
+                        'category_name' => 'reports',
+                        'orderby' => 'date'
+                    );
+
+                    $posts = get_posts( $args );
+
+                    if ( $posts ) :
+                        foreach ($posts as $post) : setup_postdata ($post);
 
                             get_template_part( 'template-parts/content', get_post_format() );
 
-                        endwhile; ?>
+                        endforeach; ?>
 
                         <div class="col-12 blog-navigation">
 
