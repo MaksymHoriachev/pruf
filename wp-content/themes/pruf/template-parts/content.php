@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="col-md-12 col-lg-4 entry-post">
+<div class="col-12 col-md-6 col-lg-4 entry-post">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="entry-thumbnail">
