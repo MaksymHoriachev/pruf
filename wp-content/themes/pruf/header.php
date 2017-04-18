@@ -51,6 +51,6 @@
 		</div><!-- .container -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content <?php if (is_page('home')) { ?>home-page<?php }?>">
         <div class="container">
             <div class="row">

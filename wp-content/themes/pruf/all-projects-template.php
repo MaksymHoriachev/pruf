@@ -1,4 +1,9 @@
 <?php
+
+/*
+Template Name: All Projects
+*/
+
 get_header(); ?>
 
     <div class="col-12">
@@ -6,11 +11,21 @@ get_header(); ?>
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 
-                <h2 class="loop-title">Блог</h2>
+                <h2 class="loop-title"><?php the_title(); ?></h2>
 
                 <div class="row">
 
                     <?php
+
+                    $args = array(
+                        'post_type' => 'posts-projects',
+                        'category_name' => 'projects',
+                        'orderby' => 'date',
+                        'paged' => get_query_var( 'paged' )
+                    );
+
+                    query_posts( $args );
+
                     if ( have_posts() ) :
                         while ( have_posts() ) : the_post();
 
@@ -27,6 +42,8 @@ get_header(); ?>
                             ) ); ?>
 
                         </div>
+
+                        <?php wp_reset_query(); ?>
 
                     <?php else :
 
