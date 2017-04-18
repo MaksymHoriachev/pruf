@@ -100,6 +100,8 @@ ul {
 
 .site-content {
   padding-top: 50px; }
+  .site-content.home-page {
+    padding-top: 0; }
 
 .front-container {
   display: flex;
