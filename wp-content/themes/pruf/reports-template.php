@@ -20,17 +20,18 @@ get_header(); ?>
                     $args = array(
                         'post_type' => 'post-event',
                         'category_name' => 'reports',
-                        'orderby' => 'date'
+                        'orderby' => 'date',
+                        'paged' => get_query_var( 'paged' )
                     );
 
-                    $posts = get_posts( $args );
+                    query_posts( $args );
 
-                    if ( $posts ) :
-                        foreach ($posts as $post) : setup_postdata ($post);
+                    if ( have_posts() ) :
+                        while ( have_posts() ) : the_post();
 
                             get_template_part( 'template-parts/content', get_post_format() );
 
-                        endforeach; ?>
+                        endwhile; ?>
 
                         <div class="col-12 blog-navigation">
 
@@ -41,6 +42,8 @@ get_header(); ?>
                             ) ); ?>
 
                         </div>
+
+                        <?php wp_reset_query(); ?>
 
                     <?php else :
 

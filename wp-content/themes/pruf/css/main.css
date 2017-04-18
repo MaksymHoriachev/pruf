@@ -31,12 +31,23 @@ ul {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
+.entry-excerpt-single .h1, .entry-excerpt-single .h2, .entry-excerpt-single .h3, .entry-excerpt-single .h4, .entry-excerpt-single .h5, .entry-excerpt-single .h6, .entry-excerpt-single h1, .entry-excerpt-single h2, .entry-excerpt-single h3, .entry-excerpt-single h4, .entry-excerpt-single h5, .entry-excerpt-single h6 {
+  margin-bottom: 20px; }
+
 .entry-thumbnail img {
   width: 100%;
   display: block; }
 
 .pages-section {
   margin-bottom: 50px; }
+
+.page-btn-link {
+  padding-top: 10px; }
+  .page-btn-link a {
+    font-size: 14px;
+    color: #3f3f3f; }
+    .page-btn-link a:hover {
+      color: #6e6e6e; }
 
 .site-header {
   background-color: #eee;
@@ -174,8 +185,8 @@ ul {
 
 .header-center {
   text-align: center;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 38px;
+  font-weight: normal;
   padding: 0 10px 50px 10px; }
 
 .loop-title {
