@@ -1,5 +1,5 @@
 .site-header
-  background-color: #eee
+  background-color: #3f3f3f
   box-shadow: 0 0 6px rgba(0,0,0, 0.2)
 
 .site-header-inner
@@ -24,26 +24,36 @@
     font-weight: 700
     margin: 0
   a.site-title-link
-    color: #3f3f3f
+    color: #fff // color PR
     text-transform: uppercase
     font-size: 56px
     line-height: 56px
     font-weight: normal
     letter-spacing: 3px
     span
-      color: #aaa
+      color: #aaa // color UF
+
+.main-navigation
+  @media (max-width: 991px)
+    flex-basis: 100%
+    text-align: center
 
 .primary-menu
   li
     padding: 0 10px
     font-size: 14px
+    @media (max-width: 991px)
+      float: none
+      display: block
     a
-      color: #3f3f3f
+      display: inline-block
+      color: #fff // color menu
       margin: 20px 0
       text-transform: uppercase
       &:hover
         color: #aaa
-  li.current_page_item
+  li.current_page_item,
+  li.current_page_parent
     a
       color: #aaa
 

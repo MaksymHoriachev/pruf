@@ -42,6 +42,7 @@ function pruf_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
     add_image_size( 'blog-thumbnails', 600, 400, true );
+    add_image_size( 'sidebar-thumbnails', 300, 300, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
