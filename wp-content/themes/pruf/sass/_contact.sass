@@ -1,0 +1,40 @@
+.text-contacts
+  a
+    color: #bbb
+.form-collback
+  padding-bottom: 50px
+  input[type='text'],
+  input[type='email'],
+  textarea
+    display: block
+    width: 100%
+    border: 1px solid #3f3f3f
+    padding: 0 15px
+  input[type='text'],
+  input[type='email']
+    line-height: 40px
+    font-weight: 300
+  label
+    margin: 10px 0
+  .btn-form
+    margin-top: 20px
+    background: none
+    border: 2px solid #3f3f3f
+    color: #3f3f3f
+    &:hover
+      background: #3f3f3f
+      color: #fff
+  textarea
+    resize: none
+    min-height: 200px
+    padding: 10px
+  .required
+    position: relative
+    &::before
+      content: '*'
+      position: absolute
+      top: -2px
+      right: -10px
+      color: red
+.form-header
+  padding: 20px 0

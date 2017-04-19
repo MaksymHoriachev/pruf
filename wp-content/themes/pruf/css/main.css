@@ -73,6 +73,35 @@
   content: '\f167'; }
 
 /* '' */
+.social-network li {
+  margin-left: 5px; }
+  .social-network li:first-child {
+    margin-left: 0; }
+
+.social-network a {
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 10px; }
+  .social-network a:hover {
+    border-color: #fff;
+    background: #fff; }
+    .social-network a:hover:before {
+      color: #3f3f3f; }
+  .social-network a:before {
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    line-height: 36px;
+    color: #fff; }
+
 .social-network.fixed {
   position: fixed;
   top: 50%;
@@ -81,36 +110,20 @@
   .social-network.fixed li {
     margin-left: 0;
     margin-bottom: 5px; }
+    .social-network.fixed li a {
+      background: #fff;
+      border-color: #3f3f3f; }
+      .social-network.fixed li a:before {
+        color: #3f3f3f; }
+      .social-network.fixed li a:hover {
+        background: #3f3f3f; }
+        .social-network.fixed li a:hover:before {
+          color: #fff; }
     .social-network.fixed li:last-child {
       margin-bottom: 0; }
-
-.social-network li {
-  margin-left: 5px; }
-  .social-network li:first-child {
-    margin-left: 0; }
-
-.social-network a {
-  position: relative;
-  border: 2px solid #111;
-  width: 40px;
-  height: 40px;
-  display: block;
-  border-radius: 10px; }
-  .social-network a:hover {
-    border-color: #111;
-    background: #111; }
-    .social-network a:hover:before {
-      color: black; }
-  .social-network a:before {
-    font-size: 20px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
-    line-height: 36px;
-    color: #111; }
+  @media (max-width: 1210px) {
+    .social-network.fixed {
+      display: none; } }
 
 body {
   font: 300 16px/1.5 "Roboto";
@@ -124,8 +137,14 @@ button:active,
 button:focus,
 input,
 input:active,
-input:focus {
+input:focus,
+textarea,
+textarea:active,
+textarea:focus {
   outline: none; }
+
+label {
+  cursor: pointer; }
 
 a,
 a:hover,
@@ -379,6 +398,9 @@ ul {
   font-size: 40px;
   line-height: 40px;
   margin-bottom: 20px; }
+  @media (max-width: 600px) {
+    .loop-title {
+      font-size: 35px; } }
 
 .widget-area {
   padding-bottom: 50px; }
@@ -481,6 +503,73 @@ ul {
   background-image: url(../img/partners.jpg); }
 
 .footer {
-  background-color: #eee;
+  background-color: #3f3f3f;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-  padding-top: 20px; }
+  padding-top: 20px;
+  font-size: 16px;
+  padding-bottom: 30px; }
+
+.text-footer {
+  color: #fff;
+  font-size: 15px; }
+  .text-footer p {
+    margin-bottom: 8px; }
+    .text-footer p a {
+      color: #bbb; }
+
+.footer-navigation {
+  margin: 15px 0; }
+  .footer-navigation a {
+    color: #fff; }
+  .footer-navigation li.current_page_item a,
+  .footer-navigation li.current_page_parent a {
+    color: #aaa; }
+  @media (max-width: 767px) {
+    .footer-navigation ul {
+      flex-direction: column; }
+      .footer-navigation ul li {
+        margin-bottom: 10px; }
+        .footer-navigation ul li:last-child {
+          margin-bottom: 0; } }
+
+.text-contacts a {
+  color: #bbb; }
+
+.form-collback {
+  padding-bottom: 50px; }
+  .form-collback input[type='text'],
+  .form-collback input[type='email'],
+  .form-collback textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #3f3f3f;
+    padding: 0 15px; }
+  .form-collback input[type='text'],
+  .form-collback input[type='email'] {
+    line-height: 40px;
+    font-weight: 300; }
+  .form-collback label {
+    margin: 10px 0; }
+  .form-collback .btn-form {
+    margin-top: 20px;
+    background: none;
+    border: 2px solid #3f3f3f;
+    color: #3f3f3f; }
+    .form-collback .btn-form:hover {
+      background: #3f3f3f;
+      color: #fff; }
+  .form-collback textarea {
+    resize: none;
+    min-height: 200px;
+    padding: 10px; }
+  .form-collback .required {
+    position: relative; }
+    .form-collback .required::before {
+      content: '*';
+      position: absolute;
+      top: -2px;
+      right: -10px;
+      color: red; }
+
+.form-header {
+  padding: 20px 0; }

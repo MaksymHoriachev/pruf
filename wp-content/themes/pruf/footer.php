@@ -10,70 +10,41 @@
  */
 
 ?>
-            </div>
-        </div>
-	</div><!-- #content -->
-    <footer class="footer site-footer" id="colophon" role="contentinfo">
+</div>
+</div>
+</div><!-- #content -->
+<footer class="footer site-footer" id="colophon" role="contentinfo">
     <div class="container">
-        <div class="social-network">
-            <ul class="media justify-content-center">
-                <li><a href="#" class="icon-twitter"></a></li>
-                <li><a href="#" class="icon-facebook"></a></li>
-                <li><a href="#" class="icon-rss"></a></li>
-                <li><a href="#" class="icon-gplus"></a></li>
-                <li><a href="#" class="icon-instagram"></a></li>
-                <li><a href="#" class="icon-vkontakte"></a></li>
-            </ul>
+        <div class="row">
+            <?php
+            $args = array(
+                'theme_location' => 'footer',
+                'container' => '',
+                'items_wrap' => '<ul class="media justify-content-md-between justify-content-center align-items-center">%3$s</ul>'
+            );
+            ?>
+            <nav class="col-lg-6 col-12 footer-navigation">
+                <?php wp_nav_menu($args); ?>
+            </nav>
+            <div class="social-network col-lg-6 media align-items-lg-center justify-content-lg-end col-12 justify-content-center">
+                <ul class="media justify-content-center">
+                    <li><a href="#" class="icon-facebook"></a></li>
+                    <li><a href="#" class="icon-instagram"></a></li>
+                    <li><a href="#" class="icon-vkontakte"></a></li>
+                    <li><a href="#" class="icon-youtube"></a></li>
+                </ul>
+            </div>
+            <div class="text-footer col-12 mt-4">
+                <p>
+                    При повному або частковому використанні матеріалів сайту посилання на
+                    <a href="#">pruf.com.ua</a> є обов'язковим.
+                </p>
+                <p>
+                    Редакція не завжди поділяє думку авторів, експертів та блогерів.
+                </p>
+            </div>
+            <span class="copyright text-footer col-12">&copy; PRUF</span>
         </div>
-        <nav class="footer-navigation">
-            <ul class="media justify-content-sm-between">
-                <li>
-                    <a href="about-us.html">про нас</a>
-                    <ul>
-                        <li><a href="about-us.html#id1">Что такое PRUF?</a></li>
-                        <li><a href="about-us.html#id2">Что особенного в PRUF?</a></li>
-                    </ul>
-                </li>
-                <li  class="active">
-                    <a href="projects.html">ПРОЕКТЫ</a>
-                    <ul>
-                        <li><a href="projects.html#id01">Чем занимается PRUF?</a></li>
-                        <li><a href="projects.html#id-work">Наши кейсы, работы</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="events.html">ИВЕНТЫ</a>
-                    <ul>
-                        <li><a href="events.html">Что устраивают PRUF?</a></li>
-                        <li><a href="preview-events.html">Анонсы</a></li>
-                        <li><a href="report-events.html">Oтчёты</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="partners.html">ПАРТНЁРЫ</a>
-                    <ul>
-                        <li><a href="partners.html">Как присоединиться к PRUF?</a></li>
-                        <li><a href="partners.html#id02">Оффер</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="blog.html">БЛОГ</a>
-                </li>
-                <li>
-                    <a href="contacts.html">КОНТАКТЫ</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="text text-footer">
-            <p>
-                При повному або частковому використанні матеріалів сайту посилання на
-                <a href="#">pruf.com.ua</a> є обов'язковим.
-            </p>
-            <p>
-                Редакція не завжди поділяє думку авторів, експертів та блогерів.
-            </p>
-        </div>
-        <span class="copyright text">&copy; PRUF</span>
     </div>
 </footer>
 </div><!-- #page -->
