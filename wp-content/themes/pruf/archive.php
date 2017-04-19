@@ -49,19 +49,19 @@ get_header(); ?>
 
                     endwhile; ?>
 
+                    <div class="col-12 blog-navigation">
+
+                        <?php the_posts_navigation( array(
+                            'prev_text'          => '&larr; Предыдущие статьи',
+                            'next_text'          => 'Следующие статьи &rarr;',
+                            'screen_reader_text' => 'Навигация'
+                        ) ); ?>
+
+                    </div>
+
                 </div>
 
-                <div class="col-12 blog-navigation">
-
-                    <?php the_posts_navigation( array(
-                        'prev_text'          => '&larr; Предыдущие статьи',
-                        'next_text'          => 'Следующие статьи &rarr;',
-                        'screen_reader_text' => 'Навигация'
-                    ) ); ?>
-
-                </div>
-
-            <?php else :
+                <?php else :
 
                 get_template_part( 'template-parts/content', 'none' );
 
