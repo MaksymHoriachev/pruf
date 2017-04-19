@@ -9,22 +9,38 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<div class="col-12 col-md-6 col-lg-4 entry-post">
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php pruf_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+        <div class="entry-thumbnail">
+            <a href="<?php the_permalink(); ?>" class="entry-thumbnail-link">
+                <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail( 'blog-thumbnails' );
+                } else { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/600x400.png" alt="img">
+                <?php }; ?>
+            </a>
+        </div>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+        <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );; ?>
 
-	<footer class="entry-footer">
-		<?php pruf_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+        <div class="entry-meta">
+            <span><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author(); ?></a></span>
+            <span><?php the_time('d.m.Y'); ?></span>
+            <span>
+                <?php
+
+                $categories_list = get_the_category_list( esc_html__( ', ', 'pruf' ) );
+
+                echo $categories_list;
+
+                ; ?>
+            </span>
+        </div>
+
+        <div class="entry-excerpt">
+            <?php the_excerpt(); ?>
+        </div>
+
+    </article><!-- #post-## -->
+</div>
