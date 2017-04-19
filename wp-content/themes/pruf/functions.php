@@ -160,7 +160,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * -------------------------------- Excerpt count length -------------------------------
  */
 function blog_home_excerpt_length() {
-    return 15;
+    return 10;
 };
 add_filter( 'excerpt_length', 'blog_home_excerpt_length' );
 

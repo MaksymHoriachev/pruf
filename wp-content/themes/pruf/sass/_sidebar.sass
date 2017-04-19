@@ -1,19 +1,20 @@
+.widget-area
+  padding-bottom: 50px
+
 .sidebar-latest-posts
-  margin: 0 0 40px 0
+  margin: 0 0 50px 0
 
 .latest-posts-title
   font-size: 22px
   font-weight: normal
   border: 1px solid #e6e6e6
+  background-color: #e6e6e6
   padding: 15px 20px
   text-align: center
   -webkit-user-select: none
   -moz-user-select: none
   select: none
   cursor: default
-
-.latest-posts-list
-
 
 .latest-posts-item
   border-left: 1px solid #e6e6e6
@@ -25,13 +26,70 @@
     display: block
     padding: 20px
 
-.latest-posts-item-title
+.latest-posts-item-content
   padding-left: 0
   margin: 0
+  p
+    margin: 0
+    color: #aaa
+    font-size: 12px
+    @media (min-width: 992px) and (max-width: 1199px)
+      font-size: 12px
+      line-height: 14px
+    @media (min-width: 576px) and (max-width: 991px)
+      font-size: 14px
+      line-height: 22px
+
+.latest-posts-item-title
+  margin-bottom: 10px
   color: #3f3f3f
   font-weight: 400
-  font-size: 18px
+  font-size: 14px
+  line-height: 16px
+  @media (min-width: 992px) and (max-width: 1199px)
+    font-size: 12px
+    line-height: 14px
+  @media (min-width: 576px) and (max-width: 991px)
+    font-size: 20px
+    line-height: 24px
 
 .post-not-found
   margin: 0
   padding: 20px
+
+/* ----------------------- links pages ---------------------- */
+.sidebar-links-pages
+  margin: 0 0 50px 0
+
+.links-pages-item
+  position: relative
+  width: 100%
+  height: 120px
+  background-color: #000
+  background-size: cover
+  margin-bottom: 30px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0,0,0, 0.6)
+  a
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    color: #fff
+    font-size: 36px
+    line-height: 120px
+    font-weight: 400
+    text-align: center
+
+.sidebar-projects
+  background-image: url(../img/progects.jpg)
+
+.sidebar-partners
+  background-image: url(../img/partners.jpg)
