@@ -33,12 +33,12 @@ get_header(); ?>
         <h3 class="header-center form-header">Обратная связь</h3>
         <div class="form-collback row">
             <form action="#" method="post" class="col-lg-6">
-                <label for="discription">Побажання, зауваження чи пропозиції</label>
-                <textarea name="discription" id="discription" class="discription"></textarea>
+                <label for="discription" class="required">Побажання, зауваження чи пропозиції</label>
+                <textarea name="discription" id="discription" class="discription" required></textarea>
                 <label for="email" class="required">Email для зворотнього зв'язку</label>
                 <input type="email" name="email" id="email" required>
-                <label for="name" class="required">Ваше имя</label>
-                <input type="text" name="name" id="name" required>
+                <label for="name">Ваше имя</label>
+                <input type="text" name="name" id="name">
                 <button type="submit" class="btn-form">Отправить</button>
             </form>
         </div>
