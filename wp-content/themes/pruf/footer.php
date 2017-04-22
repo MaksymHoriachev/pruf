@@ -28,10 +28,10 @@
             </nav>
             <div class="social-network col-lg-6 media align-items-lg-center justify-content-lg-end col-12 justify-content-center">
                 <ul class="media justify-content-center">
-                    <li><a href="#" class="icon-facebook"></a></li>
-                    <li><a href="#" class="icon-instagram"></a></li>
-                    <li><a href="#" class="icon-vkontakte"></a></li>
-                    <li><a href="#" class="icon-youtube"></a></li>
+                    <li><a href="https://www.facebook.com/prufN" target="_blank" rel="nofollow noopener" class="icon-facebook"></a></li>
+                    <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-instagram"></a></li>
+                    <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-vkontakte"></a></li>
+                    <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-youtube"></a></li>
                 </ul>
             </div>
             <div class="text-footer col-12 mt-4">

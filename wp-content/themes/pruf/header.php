@@ -23,10 +23,10 @@
 
 <div class="social-network fixed">
     <ul>
-        <li><a href="#" class="icon-facebook"></a></li>
-        <li><a href="#" class="icon-instagram"></a></li>
-        <li><a href="#" class="icon-vkontakte"></a></li>
-        <li><a href="#" class="icon-youtube"></a></li>
+        <li><a href="https://www.facebook.com/prufN" target="_blank" rel="nofollow noopener" class="icon-facebook"></a></li>
+        <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-instagram"></a></li>
+        <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-vkontakte"></a></li>
+        <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-youtube"></a></li>
     </ul>
 </div>
 

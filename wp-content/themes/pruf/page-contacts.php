@@ -18,13 +18,13 @@ get_header(); ?>
         <h3 class="loop-title">Наши контакты</h3>
         <div class="text-contacts">
             <p>
-                Ідеї для матеріалів та статті на розгляд: <a href="#">pruf_ua@gmail.com</a>
+                Идеи для материалов и статьи на рассмотрение: <a href="#">pruf_ua@gmail.com</a>
             </p>
             <p>
-                З питань партнерств чи розміщення інформації: <a href="#">pruf_ua@gmail.com</a>
+                По вопросам партнерства и размещения информации: <a href="#">pruf_ua@gmail.com</a>
             </p>
             <p>
-                Інсайди з життя PRUF: <a href="#">pruf_ua@gmail.com</a>
+                Инсайды из жизни PRUF: <a href="#">pruf_ua@gmail.com</a>
             </p>
             <p>
                 Запитання, пропозиції та промені добра: <a href="#">pruf_ua@gmail.com</a>
@@ -33,9 +33,9 @@ get_header(); ?>
         <h3 class="header-center form-header">Обратная связь</h3>
         <div class="form-collback row">
             <form action="#" method="post" class="col-lg-6">
-                <label for="discription" class="required">Побажання, зауваження чи пропозиції</label>
+                <label for="discription" class="required">Пожелания, рекомендации и пропозици</label>
                 <textarea name="discription" id="discription" class="discription" required></textarea>
-                <label for="email" class="required">Email для зворотнього зв'язку</label>
+                <label for="email" class="required">Email для обратной связи</label>
                 <input type="email" name="email" id="email" required>
                 <label for="name">Ваше имя</label>
                 <input type="text" name="name" id="name">
