@@ -27,13 +27,13 @@ get_header(); ?>
                 Инсайды из жизни PRUF: <a href="#">pruf_ua@gmail.com</a>
             </p>
             <p>
-                Запитання, пропозиції та промені добра: <a href="#">pruf_ua@gmail.com</a>
+                Пожелания, рекомендации и пропозиции: <a href="#">pruf_ua@gmail.com</a>
             </p>
         </div>
         <h3 class="header-center form-header">Обратная связь</h3>
         <div class="form-collback row">
             <form action="#" method="post" class="col-lg-6">
-                <label for="discription" class="required">Пожелания, рекомендации и пропозици</label>
+                <label for="discription" class="required">Пожелания, рекомендации и пропозиции</label>
                 <textarea name="discription" id="discription" class="discription" required></textarea>
                 <label for="email" class="required">Email для обратной связи</label>
                 <input type="email" name="email" id="email" required>
