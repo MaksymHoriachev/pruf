@@ -9,40 +9,54 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <div class="col-12">
 
-		<?php
-		if ( have_posts() ) : ?>
+        <section id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'pruf' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+                <?php
+                if ( have_posts() ) : ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+                    <?php get_search_form(); ?>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+                    <header class="page-header">
+                        <h1 class="page-title loop-title"><?php printf( esc_html__( 'Результаты поиска для: %s', 'pruf' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                    </header><!-- .page-header -->
 
-			endwhile;
+                <div class="row">
 
-			the_posts_navigation();
+                    <?php
+                    /* Start the Loop */
+                    while ( have_posts() ) : the_post();
 
-		else :
+                        get_template_part( 'template-parts/content', 'search' );
 
-			get_template_part( 'template-parts/content', 'none' );
+                    endwhile; ?>
 
-		endif; ?>
+                    <div class="col-12 blog-navigation">
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+                        <?php the_posts_navigation( array(
+                            'prev_text'          => '&larr; Предыдущие статьи',
+                            'next_text'          => 'Следующие статьи &rarr;',
+                            'screen_reader_text' => 'Навигация'
+                        ) ); ?>
+
+                    </div>
+
+                <?php else :
+
+                    get_template_part( 'template-parts/content', 'none' );
+
+                endif; ?>
+
+                </div>
+
+            </main><!-- #main -->
+        </section><!-- #primary -->
+
+    </div>
+
+
 
 <?php
-get_sidebar();
 get_footer();

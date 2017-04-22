@@ -1,5 +1,40 @@
 .footer {
-  background-color: #eee;
+  background-color: #3f3f3f;
   box-shadow: 0 0 6px rgba(0,0,0,.2);
   padding-top: 20px;
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+.text-footer {
+  color: #fff;
+  font-size: 15px;
+  p {
+    margin-bottom: 8px;
+    a {
+      color: #bbb;
+    }
+  }
+}
+.footer-navigation {
+  margin: 15px 0;
+  a {
+    color: #fff;
+  }
+  li.current_page_item,
+  li.current_page_parent {
+    a {
+      color: #aaa
+    }
+  }
+  @media (max-width: 767px) {
+    ul {
+      flex-direction: column;
+      li {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

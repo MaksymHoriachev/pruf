@@ -47,6 +47,7 @@ function pruf_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'pruf' ),
+        'footer' => __( 'Footer Menu'),
 	) );
 
 	/*
@@ -160,7 +161,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * -------------------------------- Excerpt count length -------------------------------
  */
 function blog_home_excerpt_length() {
-    return 15;
+    return 10;
 };
 add_filter( 'excerpt_length', 'blog_home_excerpt_length' );
 

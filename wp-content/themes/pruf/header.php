@@ -20,6 +20,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="social-network fixed">
+    <ul>
+        <li><a href="#" class="icon-facebook"></a></li>
+        <li><a href="#" class="icon-instagram"></a></li>
+        <li><a href="#" class="icon-vkontakte"></a></li>
+        <li><a href="#" class="icon-youtube"></a></li>
+    </ul>
+</div>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pruf' ); ?></a>
 
