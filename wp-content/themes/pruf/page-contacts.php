@@ -42,7 +42,11 @@ get_header(); ?>
                 <button type="submit" class="btn-form">Отправить</button>
             </form>
         </div>
-
+        <? global $wpcf7_contact_form;
+        if ( ! ( $wpcf7_contact_form = wpcf7_contact_form( 233 ) ) )
+            return 'Contact form not found!';
+        $form = $wpcf7_contact_form->form_html();
+        echo $form; ?>
 
 
 
