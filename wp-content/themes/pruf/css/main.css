@@ -548,13 +548,12 @@ ul {
     display: block;
     width: 100%;
     border: 1px solid #3f3f3f;
-    padding: 0 15px; }
+    padding: 0 15px;
+    margin-top: 10px; }
   .form-collback input[type='text'],
   .form-collback input[type='email'] {
     line-height: 40px;
     font-weight: 300; }
-  .form-collback label {
-    margin: 10px 0; }
   .form-collback .btn-form {
     margin-top: 20px;
     background: none;
@@ -578,3 +577,6 @@ ul {
 
 .form-header {
   padding: 20px 0; }
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+  display: none !important; }
