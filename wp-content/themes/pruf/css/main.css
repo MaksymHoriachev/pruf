@@ -292,8 +292,7 @@ ul {
     .primary-menu li a:hover {
       color: #aaa; }
 
-.primary-menu li.current_page_item a,
-.primary-menu li.current_page_parent a {
+.primary-menu li.current_page_item a {
   color: #aaa; }
 
 .site-content {
@@ -496,7 +495,7 @@ ul {
     right: 0;
     bottom: 0;
     color: #fff;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 120px;
     font-weight: 400;
     text-align: center; }
@@ -526,8 +525,7 @@ ul {
   margin: 15px 0; }
   .footer-navigation a {
     color: #fff; }
-  .footer-navigation li.current_page_item a,
-  .footer-navigation li.current_page_parent a {
+  .footer-navigation li.current_page_item a {
     color: #aaa; }
   @media (max-width: 767px) {
     .footer-navigation ul {

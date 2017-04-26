@@ -23,7 +23,7 @@ get_header(); ?>
                             endif; ?>
                             <?php wp_reset_postdata(); ?>
                             <div class="col-12 page-btn-link">
-                                <a href="<?php echo get_page_link( 171 ); ?>" class="">Просмотреть все проекты &rarr;</a>
+                                <a href="<?php echo get_page_link( 171 ); ?>" class="">Просмотреть все &rarr;</a>
                             </div>
                         </div>
                     </div>

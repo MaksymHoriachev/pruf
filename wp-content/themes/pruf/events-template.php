@@ -44,7 +44,7 @@ get_header(); ?>
                             endif; ?>
                             <?php wp_reset_postdata(); ?>
                             <div class="col-12 page-btn-link">
-                                <a href="<?php echo get_page_link( 131 ); ?>" class="">Просмотреть все анонсы &rarr;</a>
+                                <a href="<?php echo get_page_link( 131 ); ?>" class="">Просмотреть все &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ get_header(); ?>
                             endif; ?>
 
                             <div class="col-12 page-btn-link">
-                                <a href="<?php echo get_page_link( 127 ); ?>" class="">Просмотреть все отчеты &rarr;</a>
+                                <a href="<?php echo get_page_link( 127 ); ?>" class="">Просмотреть все &rarr;</a>
                             </div>
                         </div>
                     </div>
