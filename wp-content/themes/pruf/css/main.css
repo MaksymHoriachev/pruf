@@ -2,6 +2,25 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
 @font-face {
+  font-family: 'Calibri regular';
+  src: url("../fonts/Calibri-regular.eot");
+  src: url("../fonts/Calibri-regular.woff") format("woff");
+  src: url("../fonts/Calibri-regular.ttf") format("truetype"), url("../fonts/Calibri-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url("../fonts/Century Gothic.eot");
+  src: url("../fonts/Century Gothic.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Century Gothic.woff2") format("woff2");
+  src: url("../fonts/Century Gothic.woff") format("woff"), url("../fonts/Century Gothic.svg#Century Gothic") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-F003; }
+
+@font-face {
   font-family: 'fontello';
   src: url("../libs/fonts/fontello.eot?14274652");
   src: url("../libs/fonts/fontello.eot?14274652#iefix") format("embedded-opentype"), url("../libs/fonts/fontello.woff2?14274652") format("woff2"), url("../libs/fonts/fontello.woff?14274652") format("woff"), url("../libs/fonts/fontello.ttf?14274652") format("truetype"), url("../libs/fonts/fontello.svg?14274652#fontello") format("svg");
@@ -126,7 +145,7 @@
       display: none; } }
 
 body {
-  font: 300 16px/1.5 "Roboto";
+  font: 400 16px/1.5 "Calibri regular";
   color: #3f3f3f; }
 
 * {
@@ -163,6 +182,9 @@ ul {
   margin: 0; }
 
 .entry-excerpt-single .h1, .entry-excerpt-single .h2, .entry-excerpt-single .h3, .entry-excerpt-single .h4, .entry-excerpt-single .h5, .entry-excerpt-single .h6, .entry-excerpt-single h1, .entry-excerpt-single h2, .entry-excerpt-single h3, .entry-excerpt-single h4, .entry-excerpt-single h5, .entry-excerpt-single h6 {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  line-height: 1.4;
   margin-bottom: 20px; }
 
 .entry-thumbnail img {
@@ -236,6 +258,9 @@ ul {
   .widget_recent_entries ul li a:hover {
     background-color: #e6e6e6; }
 
+.page-title {
+  font: 400 46px/48px "Century Gothic"; }
+
 .site-header {
   background-color: #3f3f3f;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.6); }
@@ -244,7 +269,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 0; }
 
 .site-branding {
@@ -263,11 +288,9 @@ ul {
     font-weight: 700;
     margin: 0; }
   .site-branding a.site-title-link {
+    font: 700 56px/56px "Century Gothic";
     color: #fff;
     text-transform: uppercase;
-    font-size: 56px;
-    line-height: 56px;
-    font-weight: normal;
     letter-spacing: 3px; }
     .site-branding a.site-title-link span {
       color: #aaa; }
@@ -279,7 +302,8 @@ ul {
 
 .primary-menu li {
   padding: 0 10px;
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: "Century Gothic"; }
   @media (max-width: 991px) {
     .primary-menu li {
       float: none;
@@ -311,22 +335,32 @@ ul {
       min-height: calc(100vh - 209px); } }
 
 .heading {
+  font-family: "Century Gothic";
+  font-weight: 700;
   font-size: 70px;
-  text-transform: uppercase;
-  font-weight: bold; }
+  text-transform: uppercase; }
   @media (max-width: 991px) {
     .heading {
       font-size: 60px; } }
+  @media (max-width: 575px) {
+    .heading {
+      font-size: 40px; } }
 
 .text-main-page {
+  font: 400 36px/48px "Calibri regular";
   padding-top: 25px;
-  font-size: 50px;
   text-align: center;
   width: 70%; }
   @media (max-width: 991px) {
     .text-main-page {
-      font-size: 36px;
+      font-size: 28px;
+      line-height: 38px;
       padding-top: 20px; } }
+  @media (max-width: 575px) {
+    .text-main-page {
+      font-size: 22px;
+      line-height: 30px;
+      padding-top: 15px; } }
 
 .site-main {
   padding-bottom: 50px; }
@@ -340,8 +374,7 @@ ul {
     min-width: 100%; }
 
 .entry-title {
-  font-size: 28px;
-  line-height: 36px;
+  font: 700 22px/30px "Century Gothic";
   margin-bottom: 10px; }
   .entry-title a {
     color: #3f3f3f; }
@@ -377,8 +410,7 @@ ul {
 
 /* ------------------------- single -------------------------- */
 .entry-title-single {
-  font-size: 40px;
-  line-height: 1.1;
+  font: 700 44px/1.4 "Century Gothic";
   margin-bottom: 15px; }
 
 .single-navigation {
@@ -395,12 +427,15 @@ ul {
 .header-center {
   text-align: center;
   font-size: 38px;
+  font-family: "Century Gothic";
   font-weight: normal;
   padding: 0 10px 50px 10px; }
 
 .loop-title {
-  font-size: 40px;
-  line-height: 40px;
+  font-family: "Century Gothic";
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 48px;
   margin-bottom: 20px; }
   @media (max-width: 600px) {
     .loop-title {
@@ -413,8 +448,7 @@ ul {
   margin: 0 0 50px 0; }
 
 .latest-posts-title {
-  font-size: 22px;
-  font-weight: normal;
+  font: 400 22px/30px "Century Gothic";
   border: 1px solid #e6e6e6;
   background-color: #e6e6e6;
   padding: 15px 20px;
@@ -453,9 +487,7 @@ ul {
 .latest-posts-item-title {
   margin-bottom: 10px;
   color: #3f3f3f;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px; }
+  font: 400 14px/16px "Century Gothic"; }
   @media (min-width: 992px) and (max-width: 1199px) {
     .latest-posts-item-title {
       font-size: 12px;
@@ -495,16 +527,8 @@ ul {
     right: 0;
     bottom: 0;
     color: #fff;
-    font-size: 26px;
-    line-height: 120px;
-    font-weight: 400;
+    font: 400 22px/120px "Century Gothic";
     text-align: center; }
-
-.sidebar-projects {
-  background-image: url(../img/progects.jpg); }
-
-.sidebar-partners {
-  background-image: url(../img/partners.jpg); }
 
 .footer {
   background-color: #3f3f3f;
@@ -524,6 +548,7 @@ ul {
 .footer-navigation {
   margin: 15px 0; }
   .footer-navigation a {
+    font: 400 14px "Century Gothic";
     color: #fff; }
   .footer-navigation li.current_page_item a {
     color: #aaa; }
@@ -575,6 +600,3 @@ ul {
 
 .form-header {
   padding: 20px 0; }
-
-.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
-  display: none !important; }

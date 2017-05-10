@@ -15,7 +15,66 @@ function pruf_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// Sidebar links pages
+	// header logo --------------------------------------------------------------
+    // section
+    $wp_customize->add_section( 'header_logo_section', array(
+        'title' => 'Header logo',
+        'priority' => 20
+    ) );
+
+    // logo section 1
+    $wp_customize->add_setting( 'header_logo_text1', array(
+        'default' => 'text'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_logo_text1_control', array(
+        'label' => 'logo text left',
+        'section' => 'header_logo_section',
+        'settings' => 'header_logo_text1',
+    ) ) );
+
+    // logo section 2
+    $wp_customize->add_setting( 'header_logo_text2', array(
+        'default' => 'text'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_logo_text2_control', array(
+        'label' => 'logo text right',
+        'section' => 'header_logo_section',
+        'settings' => 'header_logo_text2',
+    ) ) );
+
+	// home page ---------------------------------------------------------------
+    // section
+    $wp_customize->add_section( 'home_page_section', array(
+        'title' => 'Home page content',
+        'priority' => 21
+    ) );
+
+    // home title
+    $wp_customize->add_setting( 'home_page_title', array(
+        'default' => 'text'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_title_control', array(
+        'label' => 'Title',
+        'section' => 'home_page_section',
+        'settings' => 'home_page_title',
+    ) ) );
+
+    // home text
+    $wp_customize->add_setting( 'home_page_text', array(
+        'default' => 'text'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'home_page_text_control', array(
+        'label' => 'Text',
+        'section' => 'home_page_section',
+        'settings' => 'home_page_text',
+        'type' => 'textarea'
+    ) ) );
+
+	// Sidebar links pages -----------------------------------------------------------
     $wp_customize->add_section( 'sidebar_section', array(
         'title' => 'Sidebar links',
         'priority' => 30

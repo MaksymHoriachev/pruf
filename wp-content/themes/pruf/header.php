@@ -42,7 +42,7 @@
 
                         <div class="site-branding">
                             <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title-link" rel="home">pr<span>uf</span></a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-title-link" rel="home"><?php echo get_theme_mod( 'header_logo_text1' ); ?><span><?php echo get_theme_mod( 'header_logo_text2' ); ?></span></a>
                         </div><!-- .site-branding -->
 
                         <nav id="site-navigation" class="main-navigation" role="navigation">
