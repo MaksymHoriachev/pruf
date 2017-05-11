@@ -309,7 +309,7 @@ function pruf_customize_register( $wp_customize ) {
     // footer content --------------------------------------------------------------------
     $wp_customize->add_section( 'footer_content_section', array(
         'title' => 'Footer content',
-        'priority' => 100
+        'priority' => 35
     ) );
 
     // text
