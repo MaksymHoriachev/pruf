@@ -1,13 +1,4 @@
 <?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package pruf
- */
 
 ?>
 </div>
@@ -28,22 +19,29 @@
             </nav>
             <div class="social-network col-lg-6 media align-items-lg-center justify-content-lg-end col-12 justify-content-center">
                 <ul class="media justify-content-center">
-                    <li><a href="https://www.facebook.com/prufN" target="_blank" rel="nofollow noopener" class="icon-facebook"></a></li>
-                    <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-instagram"></a></li>
-                    <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-vkontakte"></a></li>
-                    <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-youtube"></a></li>
+
+                    <?php if ( get_theme_mod( 'facebook_display' ) == 'Yes' ) { ?>
+                        <li><a href="https://<?php echo get_theme_mod( 'facebook_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-facebook"></a></li>
+                    <?php }; ?>
+
+                    <?php if ( get_theme_mod( 'instagram_display' ) == 'Yes' ) { ?>
+                        <li><a href="https://<?php echo get_theme_mod( 'instagram_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-instagram"></a></li>
+                    <?php }; ?>
+
+                    <?php if ( get_theme_mod( 'vk_display' ) == 'Yes' ) { ?>
+                        <li><a href="https://<?php echo get_theme_mod( 'vk_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-vkontakte"></a></li>
+                    <?php }; ?>
+
+                    <?php if ( get_theme_mod( 'youtube_display' ) == 'Yes' ) { ?>
+                        <li><a href="https://<?php echo get_theme_mod( 'youtube_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-youtube"></a></li>
+                    <?php }; ?>
+
                 </ul>
             </div>
             <div class="text-footer col-12 mt-4">
-                <p>
-                    При полном или частичном использовании материалов сайта ссылка на
-                    <a href="#">pruf.com.ua</a> обязательна.
-                </p>
-                <p>
-                    Редакция не всегда разделяет мнение авторов, экспертов и блогеров.
-                </p>
+                <?php echo wpautop( get_theme_mod( 'footer_content' ) ); ?>
             </div>
-            <span class="copyright text-footer col-12">&copy; PRUF</span>
+            <span class="copyright text-footer col-12">&copy; <?php bloginfo( 'name' ); ?></span>
         </div>
     </div>
 </footer>

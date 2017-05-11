@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Posts About-us
+Template Name: Template About-us
 */
 
 get_header(); ?>

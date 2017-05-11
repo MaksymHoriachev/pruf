@@ -1,15 +1,4 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package pruf
- */
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -23,10 +12,26 @@
 
 <div class="social-network fixed">
     <ul>
-        <li><a href="https://www.facebook.com/prufN" target="_blank" rel="nofollow noopener" class="icon-facebook"></a></li>
-        <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-instagram"></a></li>
-        <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-vkontakte"></a></li>
-        <li><a href="#" target="_blank" rel="nofollow noopener" class="icon-youtube"></a></li>
+        <li>
+            <?php if ( get_theme_mod( 'facebook_display' ) == 'Yes' ) { ?>
+                <a href="https://<?php echo get_theme_mod( 'facebook_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-facebook"></a>
+            <?php }; ?>
+        </li>
+        <li>
+            <?php if ( get_theme_mod( 'instagram_display' ) == 'Yes' ) { ?>
+                <a href="https://<?php echo get_theme_mod( 'instagram_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-instagram"></a>
+            <?php }; ?>
+        </li>
+        <li>
+            <?php if ( get_theme_mod( 'vk_display' ) == 'Yes' ) { ?>
+                <a href="https://<?php echo get_theme_mod( 'vk_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-vkontakte"></a>
+            <?php }; ?>
+        </li>
+        <li>
+            <?php if ( get_theme_mod( 'youtube_display' ) == 'Yes' ) { ?>
+                <a href="https://<?php echo get_theme_mod( 'youtube_link' ); ?>" target="_blank" rel="nofollow noopener" class="icon-youtube"></a>
+            <?php }; ?>
+        </li>
     </ul>
 </div>
 

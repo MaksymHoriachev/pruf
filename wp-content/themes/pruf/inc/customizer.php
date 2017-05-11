@@ -74,7 +74,101 @@ function pruf_customize_register( $wp_customize ) {
         'type' => 'textarea'
     ) ) );
 
-	// Sidebar links pages -----------------------------------------------------------
+    // social networks --------------------------------------------------------------
+    $wp_customize->add_section( 'social_networks_section', array(
+        'title' => 'Social networks',
+        'priority' => 25
+    ) );
+
+    // facebook
+    $wp_customize->add_setting( 'facebook_link', array() );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'facebook_control', array(
+        'label' => 'facebook',
+        'section' => 'social_networks_section',
+        'settings' => 'facebook_link'
+    ) ) );
+
+    // instagram
+    $wp_customize->add_setting( 'instagram_link', array() );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'instagram_control', array(
+        'label' => 'instagram',
+        'section' => 'social_networks_section',
+        'settings' => 'instagram_link'
+    ) ) );
+
+    // vk
+    $wp_customize->add_setting( 'vk_link', array() );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'vk_control', array(
+        'label' => 'vk',
+        'section' => 'social_networks_section',
+        'settings' => 'vk_link'
+    ) ) );
+
+    // youtube
+    $wp_customize->add_setting( 'youtube_link', array() );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youtube_control', array(
+        'label' => 'youtube',
+        'section' => 'social_networks_section',
+        'settings' => 'youtube_link'
+    ) ) );
+
+    // facebook display
+    $wp_customize->add_setting( 'facebook_display', array(
+        'default' => 'No'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'facebook_display_control', array(
+        'label' => 'Display facebook?',
+        'section' => 'social_networks_section',
+        'settings' => 'facebook_display',
+        'type' => 'select',
+        'choices' => array( 'No' => 'No', 'Yes' => 'Yes' )
+    ) ) );
+
+    // instagram display
+    $wp_customize->add_setting( 'instagram_display', array(
+        'default' => 'No'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'instagram_display_control', array(
+        'label' => 'Display instagram?',
+        'section' => 'social_networks_section',
+        'settings' => 'instagram_display',
+        'type' => 'select',
+        'choices' => array( 'No' => 'No', 'Yes' => 'Yes' )
+    ) ) );
+
+    // vk display
+    $wp_customize->add_setting( 'vk_display', array(
+        'default' => 'No'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'vk_display_control', array(
+        'label' => 'Display vk?',
+        'section' => 'social_networks_section',
+        'settings' => 'vk_display',
+        'type' => 'select',
+        'choices' => array( 'No' => 'No', 'Yes' => 'Yes' )
+    ) ) );
+
+    // youtube display
+    $wp_customize->add_setting( 'youtube_display', array(
+        'default' => 'No'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youtube_display_control', array(
+        'label' => 'Display youtube?',
+        'section' => 'social_networks_section',
+        'settings' => 'youtube_display',
+        'type' => 'select',
+        'choices' => array( 'No' => 'No', 'Yes' => 'Yes' )
+    ) ) );
+
+    // Sidebar links pages -----------------------------------------------------------
     $wp_customize->add_section( 'sidebar_section', array(
         'title' => 'Sidebar links',
         'priority' => 30
@@ -210,6 +304,24 @@ function pruf_customize_register( $wp_customize ) {
         'section' => 'sidebar_section',
         'settings' => 'sidebar_page_partners',
         'type' => 'dropdown-pages',
+    ) ) );
+
+    // footer content --------------------------------------------------------------------
+    $wp_customize->add_section( 'footer_content_section', array(
+        'title' => 'Footer content',
+        'priority' => 100
+    ) );
+
+    // text
+    $wp_customize->add_setting( 'footer_content', array(
+        'default' => 'Some text is here...'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_content_control', array(
+        'label' => 'Footer text',
+        'section' => 'footer_content_section',
+        'settings' => 'footer_content',
+        'type' => 'textarea'
     ) ) );
 
 }

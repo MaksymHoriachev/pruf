@@ -344,18 +344,18 @@ ul {
     .heading {
       font-size: 40px; } }
 
-.text-main-page {
+.front-container p {
   font: 400 36px/48px "Calibri regular";
   padding-top: 25px;
   text-align: center;
   width: 70%; }
   @media (max-width: 991px) {
-    .text-main-page {
+    .front-container p {
       font-size: 28px;
       line-height: 38px;
       padding-top: 20px; } }
   @media (max-width: 575px) {
-    .text-main-page {
+    .front-container p {
       font-size: 22px;
       line-height: 30px;
       padding-top: 15px; } }
@@ -557,6 +557,9 @@ ul {
         margin-bottom: 10px; }
         .footer-navigation ul li:last-child {
           margin-bottom: 0; } }
+
+.copyright {
+  text-transform: uppercase; }
 
 .text-contacts a {
   color: #bbb; }
